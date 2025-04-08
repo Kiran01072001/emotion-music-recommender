@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mood Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            padding: 30px;
+        }
+
+        .form-container {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00796b;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Suggest Music Based on Mood</h2>
+    <form th:action="@{/moods/submit}" th:object="${moodLog}" method="post">
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" required/>
+
+        <label>Current Mood:</label>
+        <select th:field="*{currentMood}" required>
+            <option value="">--Choose--</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😢 Sad</option>
+            <option value="angry">😠 Angry</option>
+            <option value="relaxed">😌 Relaxed</option>
+        </select>
+
+        <label>Time of Day:</label>
+        <select th:field="*{timeOfDay}" required>
+            <option value="">--Select--</option>
+            <option value="morning">☀️ Morning</option>
+            <option value="afternoon">🌤 Afternoon</option>
+            <option value="evening">🌆 Evening</option>
+            <option value="night">🌙 Night</option>
+        </select>
+
+        <button type="submit">Suggest Music</button>
+    </form>
+</div>
+
+</body>
+</html>
+

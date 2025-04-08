@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "spring.data.open-in-view",
+  "type": "java.lang.String",
+  "description": "A description for 'spring.data.open-in-view'"
+}]}
