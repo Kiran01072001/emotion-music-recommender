@@ -57,7 +57,7 @@ CREATE TABLE mood_logs (
 Maradana Kiran
 📫 kiranmaradana141@gmail.com
 📍 Vadodara, Gujarat, India
-🌐 LinkedIn (Add your profile URL)
+🌐 LinkedIn https://www.linkedin.com/in/kiran121/
 
 📃 License
 
