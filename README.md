@@ -30,8 +30,6 @@ This is a Java Spring Boot web application that recommends Spotify tracks based 
 
 ---
 
-## 📸 Screenshots
-
 ### 🎭 Mood Submission Form
 
 http://localhost:8080/moods/new
